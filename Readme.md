@@ -7,25 +7,18 @@
 
 ```
 primetrade_project/
-├── analysis.py                  # Full standalone analysis script
-├── analysis_notebook.ipynb      # Jupyter notebook (same analysis, interactive)
+├── analysis_notebook.ipynb      # Jupyter notebook (full reproducible analysis)
 ├── README.md                    # This file
-├── charts/
-│   ├── 01_pnl_distribution_sentiment.png
-│   ├── 02_mean_performance_sentiment.png
-│   ├── 03_behavior_by_sentiment.png
-│   ├── 04_segment_performance.png
-│   ├── 05_heatmap_segment_sentiment.png
-│   ├── 06_long_short_ratio_sentiment.png
-│   ├── 07_pnl_timeline.png
-│   ├── 08_trader_archetypes.png
-│   ├── 09_model_results.png
-│   └── 10_confusion_matrix.png
-└── outputs/
-    ├── sentiment_performance.csv
-    ├── behavioral_metrics.csv
-    ├── cluster_profiles.csv
-    └── trader_summary.csv
+└── charts/
+    ├── 01_pnl_distribution_sentiment.png
+    ├── 02_mean_performance_sentiment.png
+    ├── 03_behavior_by_sentiment.png
+    ├── 04_segment_performance.png
+    ├── 05_heatmap_segment_sentiment.png
+    ├── 06_long_short_ratio_sentiment.png
+    ├── 07_pnl_timeline.png
+    ├── 08_trader_archetypes.png
+    └── 09_model_results.png
 ```
 
 ---
@@ -37,18 +30,12 @@ primetrade_project/
 pip install pandas numpy matplotlib seaborn scikit-learn jupyter nbformat
 ```
 
-### Run the script
-```bash
-# Place both CSV files in the same directory, then:
-python analysis.py
-```
-
-### Run the notebook
+### Run the analysis
 ```bash
 jupyter notebook analysis_notebook.ipynb
 ```
 
-> **Note:** Place `fear_greed_index__1_.csv` and `historical_data__1_.csv` in the working directory. The script uses absolute paths pointing to `/mnt/user-data/uploads/` — update these to your local paths if needed.
+> **Note:** The data files `fear_greed_index.csv` and `historical_data.csv` should be placed in the `data/` directory relative to the notebook.
 
 ---
 
